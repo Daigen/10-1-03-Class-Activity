@@ -52,6 +52,8 @@
 }
 
 /* Column styles */
+/* First Meida Query Added - Adjusted the height, width, and margin */
+/* @media: https://www.w3schools.com/cssref/atrule_media.php */
 @media (min-width: 500px){
   .column {
     display: flex;
@@ -60,7 +62,7 @@
     flex-direction: column;
     margin: 20px auto 0 auto;
   }
-
+/* Updated the food item containers to make the display better in the column orientation - Adjusted the height, width, padding, and margin */
   .meal1, .meal2, .meal3 {
     height: auto;
     width: 100%;
@@ -69,15 +71,19 @@
     margin-bottom: 20px;
   }
 }
+/* Second Meida Query Added - only changed the flex-direction, the .column class will inherit all the properties of the .column in the first media query (lines 57-63) */
 @media (min-width: 800px){
   .column {
     flex-direction: row;
   }
-
+/* Updated the food item containers to make the display better in the row orientation - Adjusted just the margin and all the other properties are inherited from the first media query (lines 65-71) */
   .meal1, .meal2, .meal3 {
     margin-right: 20px;
   }
 }
+/* Updated the background-position to align the background image to the top center of the food item container, and added the background-size: cover to make the background image fill the food item container as it changed size based on the media query orientation and browser width */
+/* background-size:  https://www.w3schools.com/cssref/css3_pr_background-size.php */
+/* background-position: https://www.w3schools.com/cssref/pr_background-position.php */
 .meal1 {
   background-image: url("../images/steak.png");
   background-repeat: no-repeat;
